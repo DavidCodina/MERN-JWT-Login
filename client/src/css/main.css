@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+
+
+/* =============================================================================
+                                  Reset
+============================================================================= */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* https://css-tricks.com/snippets/css/hide-scrollbar-in-edge-ie-1011/ */
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  line-height: 1.5;
+  color: #333;
+  background-color: rgb(243,242,247);
+}
+
+#root {
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 0%;
+}
+
+.fancy-h1 {
+  margin: 0;
+  padding: 0px 25px;
+  color: snow;
+  text-align: center;
+  font-size: 50px;
+  font-family: Montserrat;
+  letter-spacing: 3px;
+  line-height: 1.25;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: violet;
+  text-shadow: -3px 3px 6px rgba(0,0,0,0.15);
+}
+
+.fancy-h2 {
+  color: snow;
+  font-size: 40px;
+  font-family: Montserrat;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #61DAFB;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+}
+
+label > span {
+  color: violet;
+}
+
+
+/* =============================================================================
+                           Bootstrap Overwrites
+============================================================================= */
+
+
+/* Override Bootstrap margin & padding */
+[class*="col"], [class*="row"]{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #61DAFB;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-primary:hover {
+  color: #FFF;
+  background-color: #61DAFB; /* Make darker by some amount. */
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #61DAFB;
+  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 0 0 0.2rem rgba(97, 218, 251, 0.5);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #FFF;
+  background-color: #61DAFB;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(97, 218, 251, 0.5);
+}
+
+.btn-secondary {
+  color: #FFF;
+  background-color: violet;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-secondary:hover {
+  color: #FFF;
+  background-color: violet;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  color: #FFF;
+  background-color: violet;
+  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 0 0 0.2rem rgba(238, 130, 238, 0.5);
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+  color: #FFF;
+  background-color: violet;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #FFF;
+  background-color: violet;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(238, 130, 238, 0.5);
+}
+
+.btn-danger {
+  color: #FFF;
+  background-color: #FF007C;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-danger:hover {
+  color: #FFF;
+  background-color: #FF007C;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-danger:focus, .btn-danger.focus {
+  color: #FFF;
+  background-color: #FF007C;
+  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 0 0 0.2rem rgba(331, 100, 50, 0.5);
+}
+
+.btn-danger.disabled, .btn-danger:disabled {
+  color: #FFF;
+  background-color: #FF007C;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,
+.show > .btn-danger.dropdown-toggle {
+  color: #FFF;
+  background-color: #FF007C;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus,
+.show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(331, 100, 50, 0.5);
+}
+
+
+/* =============================================================================
+
+============================================================================= */
+
+
+nav {
+  background-color: #61DAFB;
+}
+
+.link {
+  position: relative;
+  padding: 6px 0px 8px 0px;
+  color: #FFF;
+  font-size: 24px;
+  font-family: Montserrat;
+  text-decoration:none;
+}
+
+.link:hover {
+  color: violet;
+  text-decoration:none;
+}
+
+.link.active-link:hover::after {
+  border-color: violet;
+}
+
+
+/* The <NavLink /> components are using this as activeClassName="active-link".
+The default is "active" */
+.active-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  border-bottom: 3px solid #FFF;
+  z-index: 1;
+}
+
+nav button {
+  min-width: 100px;
+  margin-top: 6px;   /* This will match the height of 50px created by the <NavLink /> / <a>s pushing out. */
+  margin-bottom: 6px;
+}
+
+
+/* =============================================================================
+
+============================================================================= */
+
+
+.page {
+  position: relative;
+  flex: 1 1 0%;
+}
